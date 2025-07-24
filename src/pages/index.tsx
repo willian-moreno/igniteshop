@@ -1,10 +1,12 @@
-import Image from 'next/image'
-import { HomeContainer, Product } from '../styles/pages/home'
+import 'keen-slider/keen-slider.min.css'
 
+import { useKeenSlider } from 'keen-slider/react'
+import Image from 'next/image'
 import Shirt1 from '../assets/shirts/1.png'
 import Shirt2 from '../assets/shirts/2.png'
 import Shirt3 from '../assets/shirts/3.png'
 import Shirt4 from '../assets/shirts/4.png'
+import { Container, Product } from '../styles/pages/home'
 
 const shirts = [
   {
@@ -42,24 +44,29 @@ const shirts = [
 ]
 
 export default function Home() {
+  const [sliderRef] = useKeenSlider({
+    slides: {
+      perView: 3,
+      spacing: 48,
+    },
+  })
+
   return (
-    <HomeContainer>
-      {shirts
-        .map((shirt) => (
-          <Product key={shirt.id}>
-            <Image src={shirt.image} width={420} height={378} alt="Camiseta" />
-            <footer>
-              <strong>{shirt.product.name}</strong>
-              <span>
-                {Number(shirt.product.price).toLocaleString('pt-BR', {
-                  currency: 'BRL',
-                  style: 'currency',
-                })}
-              </span>
-            </footer>
-          </Product>
-        ))
-        .slice(0, 2)}
-    </HomeContainer>
+    <Container ref={sliderRef} className="keen-slider">
+      {shirts.map((shirt) => (
+        <Product key={shirt.id} className="keen-slider__slide">
+          <Image src={shirt.image} width={420} height={378} alt="Camiseta" />
+          <footer>
+            <strong>{shirt.product.name}</strong>
+            <span>
+              {Number(shirt.product.price).toLocaleString('pt-BR', {
+                currency: 'BRL',
+                style: 'currency',
+              })}
+            </span>
+          </footer>
+        </Product>
+      ))}
+    </Container>
   )
 }

@@ -1,8 +1,7 @@
 import { styled } from '..'
 
-export const HomeContainer = styled('main', {
+export const Container = styled('main', {
   display: 'flex',
-  gap: '3rem',
   width: '100%',
   maxWidth: 'calc(1180px + ((100vw - 1180px) / 2))',
   minHeight: 520,
@@ -15,8 +14,6 @@ export const Product = styled('a', {
   alignItems: 'center',
   justifyContent: 'center',
   overflow: 'hidden',
-  padding: '0.25rem',
-  minWidth: 420,
   borderRadius: 8,
   background: 'linear-gradient(180deg, #1ea483 0%, #7465d4 100%)',
   cursor: 'pointer',
