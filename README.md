@@ -16,7 +16,9 @@
     <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
 </p>
 
-![Apresentação](./src/assets/presentation.png)
+<div align="end">
+    <img src="./src/assets/presentation.png" alt="Apresentação" width="80%" />
+</div>
 
 <h3>📌 Sobre</h3> 
 
