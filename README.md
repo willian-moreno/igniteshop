@@ -1,34 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">Eae, Dev! 👊🏾</p>
+<p align="center">Seja bem vindo(a) ✨🚀</p>
 
-## Getting Started
+<h1 align="center">Ignite Shop</h1>
+<h3 align="center">Formação React - Rocketseat</h3>
 
-First, run the development server:
+<p align="center">
+    <a href="#-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#-licença">Licença</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#-acesse-o-rocketseat-one">Acesse o Rocketseat One</a>
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+<p align="center">
+    <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
+</p>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![Apresentação](./src/assets/presentation.png)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+<h3>📌 Sobre</h3> 
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+A Ignite Shop é uma loja de e-commerce, desenvolvida com Next.js e StitchesJS. Ela explora as funcionalidades do Next.js, como Server-Side Rendering (SSR) e Static-Site Generation (SSG), para garantir alta performance e uma experiência de usuário fluida. O StitchesJS é usado para a estilização dos componentes, permitindo um desenvolvimento eficiente e escalável com CSS-in-JS.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<h3>📌 Tecnologias</h3> 
 
-## Learn More
+- Next.js;
+- StitchesJS;
+- TypeScript;
+- HTML, CSS, JavaScript;
+- Git;
+- Figma;
 
-To learn more about Next.js, take a look at the following resources:
+<h3>📌 Layout</h3>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/design/a83oUYvMD7pbNXJ8tJ0uRc/Ignite-Shop-%E2%80%A2-Projeto-React--Copy-?node-id=2-12&p=f). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<h3>📌 Licença</h3>
 
-## Deploy on Vercel
+Esse projeto está sob a licença MIT.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<h3>📌 Acesse o Rocketseat One</h3>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[Rocketseat One](https://app.rocketseat.com.br/cart/rocketseat-one?referral=willian-moreno&utm_source=platform&utm_medium=organic&utm_campaign=venda&utm_term=mgm&utm_content=indication-lp_one)
