@@ -8,7 +8,7 @@ export const Container = styled('main', {
   marginLeft: 'auto',
 })
 
-export const Product = styled('a', {
+export const Product = styled('div', {
   position: 'relative',
   display: 'flex',
   alignItems: 'center',
