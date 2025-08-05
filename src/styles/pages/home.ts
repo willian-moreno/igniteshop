@@ -38,11 +38,11 @@ export const Product = styled('a', {
     transition: 'all 0.2s ease-in-out',
 
     strong: {
-      fontSize: '$lg',
+      fontSize: '$base',
     },
 
     span: {
-      fontSize: '$xl',
+      fontSize: '$md',
       fontWeigth: 'bold',
       color: '$green300',
     },

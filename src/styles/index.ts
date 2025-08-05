@@ -15,6 +15,7 @@ export const { config, theme, styled, css, globalCss, keyframes, getCssText, cre
         green300: '#00b37e',
       },
       fontSizes: {
+        base: '1rem',
         md: '1.125rem',
         lg: '1.25rem',
         xl: '1.5rem',
