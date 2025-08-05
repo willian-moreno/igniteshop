@@ -1,28 +1,61 @@
+import { GetStaticProps } from 'next'
 import Image from 'next/image'
-import { useRouter } from 'next/router'
+import Stripe from 'stripe'
+import { stripe } from '../../lib/stripe'
 import { Container, ImageContainer, ProductDetails } from '../../styles/pages/product'
 
-export default function Product() {
-  const { query } = useRouter()
+interface ProductProps {
+  product: {
+    id: string
+    name: string
+    description: string
+    imageUrl: string
+    url: string
+    price: string
+  }
+}
 
+export default function Product({ product }: ProductProps) {
   return (
     <Container>
       <ImageContainer>
-        <Image
-          src={
-            'https://files.stripe.com/links/MDB8YWNjdF8xUnNxQzVHU0lpVzBzQXl4fGZsX3Rlc3RfZlhZeFQ3THo0OE1vNXRGc3U5SmhmN2lq002VpnLbvl'
-          }
-          width={420}
-          height={378}
-          alt=""
-        />
+        <Image src={product.imageUrl} width={520} height={480} alt="" />
       </ImageContainer>
       <ProductDetails>
-        <h1>Camiseta X</h1>
-        <span>R$ 79,90</span>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, aut.</p>
+        <h1>{product.name}</h1>
+        <span>{product.price}</span>
+        <p>{product.description}</p>
         <button>Comprar agora</button>
       </ProductDetails>
     </Container>
   )
+}
+
+export const getStaticProps: GetStaticProps<any, { id: string }> = async ({ params }) => {
+  const productId = params.id
+
+  const response = await stripe.products.retrieve(productId, {
+    expand: ['default_price'],
+  })
+
+  const price = response.default_price as Stripe.Price
+
+  const product = {
+    id: response.id,
+    name: response.name,
+    description: response.description,
+    imageUrl: response.images[0],
+    url: response.url,
+    price: Number(price.unit_amount / 100).toLocaleString('pt-BR', {
+      currency: 'BRL',
+      style: 'currency',
+    }),
+  }
+
+  return {
+    props: {
+      product,
+    },
+    revalidate: 60 * 60 * 1, // 1 hora
+  }
 }
